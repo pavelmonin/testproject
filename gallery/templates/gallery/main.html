@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+
+    <title>{{title}}</title>
+</head>
+<body>
+
+        <nav class="navbar navbar-expand navbar-dark bg-dark mb-3 ">
+                <a class="navbar-brand" href="#">testproject</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarsExample02">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                      <a class="nav-link" href="{% url 'gallery-home'%}">Галерея </a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="{% url 'gallery-upload'%}">Добавить</a>
+                    </li>
+                
+                  </ul>
+                </div>
+               
+        </nav>
+
+      
+    <main class="container">
+        <div class="row">
+            <div class="col-md-12">
+                    {% block main_section %}
+                    {% endblock %}
+            </div>
+            <!-- <aside class="col-md-4">
+                <div class="bg-success p-3 nb-3 rounded">
+                    <h3>
+                        <b>
+                            Aside Stories
+                        </b>
+                    </h3>  
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae culpa minus a id recusandae quod iure est provident aperiam eius ut voluptas molestias quae magni, voluptate sunt tenetur? Nam assumenda dolorum ex debitis blanditiis praesentium nihil quibusdam minus, accusantium obcaecati eaque veniam incidunt exercitationem inventore, magni enim eius voluptates explicabo?</p>
+                                 
+                </div>
+                <div class="p-3 mb-3">
+                        <img src="https://picsum.photos/200/300" alt="picsum.photos/200/300" srcset="">
+                    </div>
+            </aside> -->
+        </div>        
+    </main>
+    
+</body>
+</html>

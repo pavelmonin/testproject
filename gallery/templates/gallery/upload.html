@@ -1,0 +1,10 @@
+{% extends 'gallery/main.html'%}
+<h2 class="row justify-content-center align-self-center ">Галерея</h2> 
+{% block main_section %}
+<h2 class="row justify-content-center align-self-center mb-5">Загрузить в галерею</h2>
+<form method = "post" enctype="multipart/form-data"> 
+    {% csrf_token %} 
+    {{ form.as_p}} 
+    <button type="submit">Загрузить</button> 
+</form>
+{% endblock main_section  %}
